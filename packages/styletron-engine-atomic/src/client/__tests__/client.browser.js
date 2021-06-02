@@ -355,6 +355,10 @@ function injectFixtureStyles(styletron) {
   styletron.renderStyle({
     display: "flex",
   });
+  styletron.renderStyle({
+    backgroundImage:
+      "url(data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=)",
+  });
   styletron.renderFontFace({src: "url(blah)"});
   styletron.renderKeyframes({from: {color: "red"}, to: {color: "blue"}});
 }
