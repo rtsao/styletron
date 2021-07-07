@@ -33,6 +33,7 @@ type optionsT = {
   container?: Element,
   prefix?: string,
   strict?: boolean,
+  speedy?: boolean,
 };
 
 type cacheT = {
@@ -88,7 +89,10 @@ class StyletronClient implements StandardEngine {
       this.container = document.head;
     }
 
-    this.styleSheet = new StyleSheet({container: this.container});
+    this.styleSheet = new StyleSheet({
+      container: this.container,
+      speedy: this.opts.speedy,
+    });
   }
 
   renderStyle(styles: StyleObject): string {
